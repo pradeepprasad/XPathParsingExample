@@ -28,7 +28,7 @@ public class XpathAxisExample {
 		XPath xpath= XPathFactory.newInstance().newXPath();	
 		//get the high level element given in expression.
 		NodeList nodes =(NodeList) xpath.evaluate("//machines/machine",doc, XPathConstants.NODESET);
-			if(nodes !=null)
+			if(nodes.getLength() > 0)
 			{
 				for(int i=0;i<nodes.getLength();i++)
 				{
